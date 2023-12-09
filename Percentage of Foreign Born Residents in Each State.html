@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">jquery[3.6.0];shiny-css[1.7.4];shiny-javascript[1.7.4];bootstrap[3.4.1]</script>
+<script src="jquery-3.6.0/jquery.min.js"></script>
+<link href="shiny-css-1.7.4/shiny.min.css" rel="stylesheet" />
+<script src="shiny-javascript-1.7.4/shiny.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+<link href="bootstrap-3.4.1/accessibility/css/bootstrap-accessibility.min.css" rel="stylesheet" />
+<script src="bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script src="bootstrap-3.4.1/accessibility/js/bootstrap-accessibility.min.js"></script>  <title>Percentage of Foreign Born Residents in Each State</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <h2>Percentage of Foreign Born Residents in Each State</h2>
+    <div class="row">
+      <div class="col-sm-3">
+        <div id="year" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="year-label">
+          <label class="control-label" id="year-label" for="year">Select Year</label>
+          <div class="shiny-options-group">
+            <div class="radio">
+              <label>
+                <input type="radio" name="year" value="1900" checked="checked"/>
+                <span>1900</span>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="year" value="1950"/>
+                <span>1950</span>
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="year" value="2000"/>
+                <span>2000</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="col-sm-8" role="main">
+          <div class="shiny-plot-output html-fill-item" id="map" style="width:100%;height:400px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
